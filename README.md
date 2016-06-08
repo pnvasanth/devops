@@ -1,1 +1,1 @@
-# dockerfiles
+# Simple Docker env for projects

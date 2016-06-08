@@ -1,0 +1,18 @@
+#!/bin/bash
+export SYMFONY__ENVIRONMENT__CURRENT=$1
+
+rm -R /var/www/api/app/cache
+rm -R /var/www/api/app/logs
+
+mkdir -p /var/www/api/app/cache/$1
+mkdir -p /var/www/api/app/logs
+
+chown -R www-data:www-data /var/www/api/app/cache
+chown -R www-data:www-data /var/www/api/app/logs
+
+chmod o+w /var/www/api/app/cache/$1
+chmod o+w /var/www/api/app/logs
+
+
+# Start 'er up
+apache2-foreground

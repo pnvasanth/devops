@@ -1,0 +1,26 @@
+nginx:
+    build: ./nginx
+    links:
+        - api1:api1
+        - api2:api2
+        - api3:api3
+    ports:
+        - "80:80"
+api1:
+    build: ./api
+    ports:
+        - "80"
+    volumes:
+        - /home/vas/work/php/ArqivaTest:/var/www/api
+api2:
+    build: ./api
+    ports:
+        - "80"
+    volumes:
+        - /home/vas/work/php/ArqivaTest:/var/www/api
+api3:
+    build: ./api
+    ports:
+        - "80"
+    volumes:
+        - /home/vas/work/php/ArqivaTest:/var/www/api
