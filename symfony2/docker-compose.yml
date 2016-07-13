@@ -11,16 +11,16 @@ api1:
     ports:
         - "80"
     volumes:
-        - /home/vas/work/php/ArqivaTest:/var/www/api
+        - /symfony/app/path:/var/www/api
 api2:
     build: ./api
     ports:
         - "80"
     volumes:
-        - /home/vas/work/php/ArqivaTest:/var/www/api
+        - /symfony/app/path:/var/www/api
 api3:
     build: ./api
     ports:
         - "80"
     volumes:
-        - /home/vas/work/php/ArqivaTest:/var/www/api
+        - /symfony/app/path:/var/www/api
